@@ -85,14 +85,8 @@ nav ul li a:hover {
   background-color: #e65c00;
 }
 
+/* main area here */
 
-/* main containers style */
-.home{
-  height: 100vh;
-  background: url(assets/bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
 /* Footer styles */
