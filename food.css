@@ -1,10 +1,11 @@
 /* Reset styles */
+  
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
 * {
-  font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
   }
   
   /* Body styles */
@@ -28,8 +29,13 @@
   /* misc */
   
   
-
- 
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
+  *{
+    font-family: Poppins;
+  }
+  
   /* header */
   .logo img {
     width: 100px;
@@ -80,78 +86,55 @@
   .search-bar button:hover {
     background-color: #e65c00;
   }
+  
+  
+  /* main containers style */
+  main{
+    background-color: #F3EEEA;
+  }
 
+  .home{
+    padding: 20vh;
+    height: 100vh;
+    background: url(assets/loc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   main h1{
     color: #C51605;
     text-align: center;
     background-color: #FAF6F0;
     
   }
-  main h6{
-    text-align: center;
-    color: #333;
-  }
-  main h3{
-    font-size: xx-large;
-  }  
-  main h4{
-    font-size: x-large;
-  }
   main h1:hover{
     text-shadow: 2px 2px 50px #FD8D14;
-  }  
-
-  /* main containers style */
- 
-  .home{
-    background: url(assets/reservation.avif) no-repeat;
-    width:100%;
-    height: 50vh;
-    background-size: cover;
   }
-
-  .reservation-section{
-    height: 70vh;
-    background: #FF5722;
+  .home h2{
+    color: #f4f4f4;
+    font-size: 10vh;
+  }
+  .home p{
+    color: #f4f4f4;
+  }
+  .gallery{
+    padding: 10vh;
+  }
+  .gallery h2{
     
-  }
-  .reservation-section .form{
-    padding: 10vh 10vw;
-    gap: 3vw;
-    color: #EEEEEE;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main label {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main input{
-    border: #e65c00;
-    border-radius: 1vh 1vw;
-    padding: 1vh 1vw;
-  }
-
-
-  main button {
-    font-weight: bolder;
-    border: none;
-    border-radius: 5vh;
-    background-color:#FAF6F0;
-    color: #ff6600;
-    padding: 15px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  main button:hover{
-    background-color:#FF5722;
-    border: 1px solid #FAF6F0;
-    color: #FAF6F0;
+    font-size:xx-large;
   }
   
+  .gallery .pictures{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-evenly;
+  }
+  .gallery .pictures img{
+    height: 50vh;
+    width: 70vh;
+    padding: 4vw;
+  }
+
   /* Footer styles */
   footer {
     text-align: center;
