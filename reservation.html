@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | Haeri's Sizzling House</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    
+    <header>
+        <!-- Logo -->
+        <div class="logo"><img src="assets/HaeRi’s.png" alt="YOUR LOGO"></div>
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="gallery.html">Gallery </a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>LOCATION</h1>
+        <h6>&#128204; 23 Paseo del Congreso St, Malolos, 3000 Bulacan</h6>
+        <section id="reservation-section" class="reservation-section">
+            <div class="form">
+                <span> 
+                    <h3>Newport World Resorts </h3>
+                    <p> &#x1F4CD; 2/F Newport Mall, Newport World Resorts, Pasay City <br> </p>
+                    <h3>OPENING HOURS </h3>
+                        &#x1F553;SUNDAYS TO THURSDAYS <br>
+                        11:00AM - 12:00 MN <br>
+                        &#x1F553;FRIDAYS & SATURDAYS <br>
+                        11:00AM - 01:00 AM <br>
+                    
+                </span>
+                <span>
+                    
+                        <h3>LANDLINE</h3>
+                        <p>
+                        <sub>(02) 531 00429</sub>
+                        </p>
+                        <h3>MOBILE</h3>
+                        <p>
+                        <sub>(0999) 842 7954</sub>
+                        </p>
+                        <h3>WHERE TO PARK</h3>
+                        <p>
+                        Newport Mall, Grand Wing Parking
+                        </p>
+                    </p>
+                </span>
+
+                <span>
+                    <form id="reservationForm">
+                        <label for="date"><h4>Date:</h4></label>
+                        <input type="date" id="date" required>
+                
+                        <label for="time"><h4>Time:</h4></label>
+                        <input type="time" id="time" required>
+                
+                        <label for="people"><h4>Number of people:</h4></label>
+                        <input type="number" id="people" min="1" required>
+                
+                        <button type="button" onclick="findTable()">Reserve Now</button>
+                    </form>
+                
+                    <script>
+                        function findTable() {
+                            // Get values from the form
+                            var date = document.getElementById('date').value;
+                            var time = document.getElementById('time').value;
+                            var people = document.getElementById('people').value;
+                
+                            // Display a simple confirmation message (you can customize this part)
+                            alert('Table reserved!\nDate: ' + date + '\nTime: ' + time + '\nNumber of People: ' + people);
+                        }
+                    </script>
+                </span>
+            </div>
+        </section>
+    </main>
+    <!-- end na to ng main -->
+
+    <!-- Sections here -->
+
+
+
+
+    <footer>
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <img src="assets/HaeRi’s.png" alt="">
+        </div>
+        <!-- Footer Links dito dagdagan if meron pa-->
+        <div class="footer-links">
+            <a href="https://www.facebook.com/HaerisSizzlingHouse/" target="_blank"><input type="image" src="assets/facebook.png" alt="fb"></a>
+            <a href="https://www.facebook.com/J.blasco20"><input type="image" src="assets/twitter.png" alt="tw"></a>
+            <a href="https://www.instagram.com/explore/locations/199673700745995/haeris-sizzling-house/" target="_blank"><input type="image" src="assets/instagram.png" alt="ig"></a>
+        </div>
+        <!-- Footer menu -->
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <!-- Contact information -->
+        <div class="contact-info">
+            <!-- Your contact details -->
+        </div>
+        <div class="copyright">©2023 Haeri's Sizzling House by BSIT3FG1 Powered by niggas.</div>
+        </footer>
+    <script></script> <!-- Include your JavaScript -->
+</body>
+</html>

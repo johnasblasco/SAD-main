@@ -1,13 +1,14 @@
 /* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Poppins, monospace;
 }
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
@@ -28,11 +29,7 @@ header {
 
 
 
-/* popup */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
-*{
-    font-family: Poppins;
-}
+
 #popup {
     text-align: center;
     display: none;

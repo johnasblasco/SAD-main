@@ -1,5 +1,7 @@
 /* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
 * {
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,42 +30,7 @@
   
   
   
-  /* popup */
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
-  *{
-    font-family: Poppins;
-  }
-  #popup {
-    text-align: center;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #F5F5DC;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-  }
-  #popup p{
-    font-size: small;
-    line-height: 2;
-  }
-  #popup button{
-    margin: 10px;
-    border: 2px solid #ff6600;
-    font-weight: bolder;
-    color: #fff;
-    background-color: #ff6600;
-    padding: 10px 20px;
-  }
-  
-  #popup button:hover{
-    background-color: #fff;
-    color: #ff6600;
-  }
-  
+ 
   
   /* header */
   .logo img {
@@ -120,6 +87,7 @@
   main h1{
     color: #C51605;
     text-align: center;
+    background-color: #FAF6F0;
     
   }
   main h1:hover{
