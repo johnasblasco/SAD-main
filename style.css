@@ -194,9 +194,12 @@ main {
 /* main containers style */
 .home{
     height: 100vh;
-    background: url(assets/bg.png);
+    background: url(assets/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.home:hover{
+    filter: brightness(140%);
 }
 
 .about{
@@ -262,10 +265,13 @@ main {
     justify-content:space-evenly;
     align-items: center;
     height: 100vh;
-    background: url(assets/bg.png);
+    background: url(assets/interior1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     gap: 20px;
+  }
+  .gallery:hover{
+    filter: brightness(80%);
   }
   .gallery .left h2{
     text-align: center;
