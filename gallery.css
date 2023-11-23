@@ -85,7 +85,7 @@
   
   /* Main styles */
   main h1{
-    color: #C51605;
+    color: #320911;
     text-align: center;
     background-color: #FAF6F0;
     
@@ -101,7 +101,7 @@
     justify-content:space-evenly;
     align-items: center;
     height: 100vh;
-    background: url(assets/bg.png);
+    background: url(assets/interior1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     gap: 20px;

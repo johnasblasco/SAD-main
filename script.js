@@ -1,5 +1,5 @@
 // Sample product data (to simulate products)
-const products = [
+const my_products = [
     { name: "Product 1", price: 19.99 },
     { name: "Product 2", price: 29.99 },
     { name: "Product 3", price: 39.99 },
@@ -9,7 +9,7 @@ const products = [
 // Function to display products in the UI
 function displayProducts() {
     const productsContainer = document.querySelector('.products');
-    products.forEach(product => {
+    my_products.forEach(product => {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
         productCard.innerHTML = `

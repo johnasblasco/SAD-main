@@ -2,6 +2,7 @@
   
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
 * {
+    cursor: pointer;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -95,13 +96,15 @@
 
   .home{
     padding: 20vh;
-    height: 100vh;
-    background: url(assets/loc.jpg);
+    height: 50vh;
+    background: url(assets/foodbg.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   main h1{
-    color: #C51605;
+    color: #320911;
+    font-weight: bolder;
     text-align: center;
     background-color: #FAF6F0;
     
@@ -110,30 +113,64 @@
     text-shadow: 2px 2px 50px #FD8D14;
   }
   .home h2{
-    color: #f4f4f4;
+    color: #320911;
     font-size: 10vh;
   }
-  .home p{
-    color: #f4f4f4;
+  .home h2:hover{
+    font-size: 11vh;
+    text-shadow: 1px 1px 50px #333;
   }
-  .gallery{
+
+  .main{
     padding: 10vh;
   }
-  .gallery h2{
-    
+  .main h2{
+    color: #320911; 
     font-size:xx-large;
   }
   
-  .gallery .pictures{
+  .main .pictures{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     justify-content: space-evenly;
   }
-  .gallery .pictures img{
-    height: 50vh;
-    width: 70vh;
-    padding: 4vw;
+  .main .pictures img{
+    height: 55vh;
+    width: 75vh;
+    padding: 3vw;
   }
+  .side .pictures{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-evenly;
+  }
+  .side .pictures img{
+    height: 55vh;
+    width: 75vh;
+    padding: 3vw;
+  }
+  /* nav of foods here <3 */
+
+  .food-nav{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    background-color: #0c0c0c;
+    /* ecd7ad */
+    padding: 2vh;
+  }
+  .food-nav a button{
+    font-weight: bolder;
+    color: #ecd7ad;
+    background-color: #0c0c0c;
+    border: 1px solid #ecd7ad;
+    padding: 2vh; 
+  }
+  .food-nav a button:hover{
+    color: #0c0c0c;
+    background-color: #ecd7ad;
+  }
+
 
   /* Footer styles */
   footer {
