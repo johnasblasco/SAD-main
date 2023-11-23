@@ -101,7 +101,7 @@
     background-size: cover;
   }
   main h1{
-    color: #C51605;
+    color: #320911;
     text-align: center;
     background-color: #FAF6F0;
     
@@ -129,10 +129,14 @@
     grid-template-columns: 33% 33% 33%;
     justify-content: space-evenly;
   }
+  
   .gallery .pictures img{
     height: 50vh;
     width: 70vh;
     padding: 4vw;
+  }
+  .gallery .pictures img:hover{
+    filter: brightness(120%);
   }
 
   /* Footer styles */

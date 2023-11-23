@@ -90,8 +90,9 @@
   
   /* Main styles */
   main h1{
+    font-weight: bolder;
     background-color: #FAF6F0;
-    color: #C51605;
+    color: #320911;
     text-align: center;
     
   }
