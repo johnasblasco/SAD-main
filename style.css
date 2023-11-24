@@ -24,8 +24,87 @@ header {
     align-items: center;
 }
 
-/* misc */
 
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    color: #888;
+}
+
+/* misc */
+#popup2{
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+#popup2 #bookingContent form {
+    width: 70vh;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+#popup2 #bookingContent h2 {
+    text-align: center;
+    color: #ff8c00;
+}
+
+#popup2 #bookingContent label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#popup2 #bookingContent input, textarea {
+    text-align: center;
+    width: calc(100% - 24px);
+    height: 5vh;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+textarea{
+    resize: none;
+    height: 7vh;
+}
+
+#popup2 #bookingContent input:focus, textarea:focus {
+    border-color: #ff8c00;
+}
+
+#popup2 #bookingContent button {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+}
+
+#popup2 #bookingContent button:hover {
+    background-color: #e07b00;
+    transform: scale(1.05);
+}
 
 
 
@@ -74,13 +153,13 @@ header {
     top: -10px;
     right: -12px;
     cursor: pointer;
-  }
-  .close-btn:hover{
+}
+.close-btn:hover{
     background-color: #F5F5DC;
     color: #ff6600;
-  }
+}
 
-  /* header */
+/* header */
 .logo img {
     width: 100px;
     height: 100px;
@@ -193,16 +272,15 @@ main {
 
 /* main containers style */
 .home{
-    height: 100vh;
+    height: 80vh;
     background: url(assets/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-.home:hover{
-    filter: brightness(140%);
+
 }
 
 .about{
+    background-color: #ddd;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -210,11 +288,11 @@ main {
     font-size: 24px;
     color: #333;
     transition: color 0.3s, font-size 0.3s; /
-  }
-  .about .right h3:hover {
+}
+.about .right h3:hover {
     color: #ff7f50; 
     font-size: 28px;
-  }
+}
 .about .left img{
     margin: 50px 50px 50px 200px;
     width: 350px;
@@ -235,7 +313,7 @@ main {
     border: 2px solid #ff6600;
     font-weight: bolder;
     color: #ff6600;
-    background-color: #fff;
+    background-color: #ddd;
     padding: 10px 20px;
 }
 
@@ -252,14 +330,14 @@ main {
     color: #333;
     transition: color 0.3s, font-size 0.3s; /
     
-  }
-  .gallery-section h1:hover{
+}
+.gallery-section h1:hover{
     color: #ff7f50; 
     font-size: 50px;
-  }
-  
-  /* main containers style */
-  .gallery{
+}
+
+/* main containers style */
+.gallery{
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content:space-evenly;
@@ -269,20 +347,18 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     gap: 20px;
-  }
-  .gallery:hover{
-    filter: brightness(80%);
-  }
-  .gallery .left h2{
+}
+
+.gallery .left h2{
     text-align: center;
-    background-color: #004225;
+    background-color: #ff6600;
     color: #F5F5DC;
-  }
-  .gallery .right h2{
+}
+.gallery .right h2{
     text-align: center;
     color: #F5F5DC;
-    background-color: #004225;
-  }
+    background-color: #ff6600;
+}
 .gallery .left{
     margin-left: 5vw;
     border: 1px solid white;
@@ -296,19 +372,19 @@ main {
     width: 40vw;
 }
 .gallery .left img{
-  height: 60vh;
-  width: 40vw;
+height: 60vh;
+width: 40vw;
 } 
 .gallery .right img{
-  height: 60vh;
-  width: 40vw;
+height: 60vh;
+width: 40vw;
 } 
 
 .gallery .right img:hover{
-  filter: brightness(140%);
+filter: brightness(140%);
 }
 .gallery .left img:hover{
-  filter: brightness(150%);
+filter: brightness(150%);
 }
 
 
@@ -354,3 +430,5 @@ footer .footer-links input{
 .footer-menu ul li a:hover {
     color: #ff6600;
 }
+
+

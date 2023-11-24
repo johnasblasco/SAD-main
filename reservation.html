@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation | Haeri's Sizzling House</title>
     <link rel="stylesheet" href="reservation.css">
+    
 </head>
 <body>
     
@@ -36,7 +37,7 @@
         <section id="reservation-section" class="reservation-section">
             <div class="form">
                 <span> 
-                    <h3>Newport World Resorts </h3>
+                    <h3>Haeri's Sizzling House </h3>
                     <p> &#x1F4CD; 23 Paseo del Congreso St, Malolos, 3000 Bulacan <br> </p>
                     <h3>OPENING HOURS </h3>
                         &#x1F553;SUNDAYS TO THURSDAYS <br>
@@ -72,8 +73,8 @@
                 
                         <label for="people"><h4>Number of people:</h4></label>
                         <input type="number" id="people" min="1" required>
-                
-                        <button type="button" onclick="findTable()">Reserve Now</button>
+                        <button type="button" onclick="findTable()">Check Availability</button>
+                        
                     </form>
                 
                     <script>
@@ -84,9 +85,11 @@
                             var people = document.getElementById('people').value;
                 
                             // Display a simple confirmation message (you can customize this part)
-                            alert('Table reserved!\nDate: ' + date + '\nTime: ' + time + '\nNumber of People: ' + people);
+                            alert('TABLE AVAILABLE FOR \nDate: ' + date + '\nTime: ' + time + '\nNumber of People: ' + people + '\n\n' + 'AVAILABLE : TRUE');
                         }
                     </script>
+                    
+                    <button type="button" onclick="showpopup2()">Reserve Now</button>
                 </span>
             </div>
         </section>
@@ -94,7 +97,80 @@
     <!-- end na to ng main -->
 
     <!-- Sections here -->
+    <div id="popup2">
+        <div class="bookingContent" id="bookingContent">
+            <span class="close-btn" onclick="closePopup()">X</span>
+            <form onsubmit="submitForm(event)">
+                <h2>Make a Reservation</h2>
+            
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            
+                <label for="date">Reservation Date:</label>
+                <input type="date" id="date" name="date" required>
+            
+                <label for="time">Reservation Time:</label>
+                <input type="time" id="time" name="time" required>
+            
+                <label for="guest">Party Size (e.g., number of guests):</label>
+                <input type="number" id="guest" name="guest" required>
+            
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+            
+                <button onclick="">Make Reservation</button>
+                </form>
+        </div>
+    </div>
 
+    <div id="popup">
+        <div class="popupContent">
+            <p>
+                <span class="close-btn" onclick="closePopup()">X</span>
+                    If you have any questions, please call our locations on the following numbers: <br>
+    
+                    Haeri's Sizzling House - (0995) 368 1668 <br>
+            
+                    The Podium, Ortigas - ‭(0917) 702 8913 <br>
+    
+                    Bonifacio Global City - ‭(0917) 710 1682 <br>
+    
+                    City Of Dreams - (0956) 794 0075 <br>
+    
+                    Araneta City - (0977) 412 0670 <br>
+    
+                    Facebook: @HaerisSizzlingHouse <br>
+    
+                    Instagram: @HaerisSizzlingHouse<br>
+    
+                    Operating Hours:<br>
+    
+                    Newport World Resorts<br>
+                    Bonifacio Global City<br>
+    
+                    11:00 am - 12:00 mn  Monday - Sunday<br>
+    
+                    The Podium<br>
+    
+                    Sunday - Thursday 10:00 AM - 11:00 PM<br>
+                    Friday & Saturday 10:00AM - 12:00AM<br>
+    
+                    City Of Dreams<br>
+    
+                    11:00 am - 02:00 am  Monday - Sunday<br>
+    
+                    Delivery Hours:<br>
+    
+                    11:00 am - 8:00 pm<br>
+                    5 pm cut-off for same-day delivery on all orders.<br>
+    
+                    <button id="order-here" onclick="showpopup2()">RESERVE NOW</button>
+                </p>
+            </div>
+        </div>
 
 
 
@@ -123,6 +199,42 @@
         </div>
         <div class="copyright">©2023 Haeri's Sizzling House by BSIT3FG1 Powered by niggas.</div>
         </footer>
-    <script></script> <!-- Include your JavaScript -->
+
+
+        
+    <script>
+        // popup
+        function closePopup() {
+        var popup = document.getElementById('popup');
+        var popup2 = document.getElementById('popup2');
+        popup2.style.display = 'none';
+        popup.style.display = 'none';
+        }
+
+        function showpopup2(){
+        closePopup();
+        var popup2 = document.getElementById('popup2');
+        popup2.style.display = 'block';
+        }
+        //pag na submit
+        function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Validate the form (you can add more validation logic if needed)
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('phone');
+        const dateInput = document.getElementById('date');
+        const timeInput = document.getElementById('time');
+
+        if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || dateInput.value === '' || timeInput.value === '') {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        // If the form is valid, show a success alert
+        alert('Form submitted successfully!\nName: ' + nameInput.value + '\nEmail: ' + emailInput.value + '\nDate: ' + dateInput.value + '\nTime: ' + timeInput.value);
+        closePopup();
+        }
+    </script> <!-- Include your JavaScript -->
 </body>
 </html>

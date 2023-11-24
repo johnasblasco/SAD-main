@@ -1,11 +1,11 @@
 /* Reset styles */
-  
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
 * {
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
   }
   
   /* Body styles */
@@ -27,12 +27,12 @@
   }
   
   /* misc */
-  
-  
-  
-  *{
-    font-family: Poppins;
+  main{
+    text-align: center;
+    background-color: #ff6600;
+    color: #f4f4f4;
   }
+  
   
   /* header */
   .logo img {
@@ -85,58 +85,10 @@
     background-color: #e65c00;
   }
   
+  /* main area here */
   
-  /* main containers style */
-  main{
-    background-color: #F3EEEA;
-  }
-
-  .home{
-    padding: 20vh;
-    height: 100vh;
-    background: url(assets/loc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  main h1{
-    color: #320911;
-    text-align: center;
-    background-color: #FAF6F0;
-    
-  }
-  main h1:hover{
-    text-shadow: 2px 2px 50px #FD8D14;
-  }
-  .home h2{
-    color: #f4f4f4;
-    font-size: 10vh;
-  }
-  .home p{
-    color: #f4f4f4;
-  }
-  .gallery{
-    padding: 10vh;
-  }
-  .gallery h2{
-    
-    font-size:xx-large;
-  }
   
-  .gallery .pictures{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: space-evenly;
-  }
   
-  .gallery .pictures img{
-    height: 50vh;
-    width: 70vh;
-    padding: 4vw;
-  }
-  .gallery .pictures img:hover{
-    filter: brightness(120%);
-  }
-
   /* Footer styles */
   footer {
     text-align: center;
