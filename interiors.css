@@ -113,25 +113,26 @@
   }
   .home p{
     color: #f4f4f4;
+    
   }
   .gallery{
-    padding: 10vh;
+    color: #ccc;
+    background: url(assets/reservation.avif);
+    padding-top: 10vh;
   }
   .gallery h2{
     
     font-size:xx-large;
   }
-  
   .gallery .pictures{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   
   .gallery .pictures img{
-    height: 50vh;
-    width: 70vh;
-    padding: 4vw;
+    height: 100%;
+    width: 100%;
+    padding: 2vw 2vh;
   }
   .gallery .pictures img:hover{
     filter: brightness(120%);

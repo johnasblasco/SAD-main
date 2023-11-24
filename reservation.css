@@ -111,9 +111,9 @@
   }
 
   .reservation-section{
-    height: 70vh;
+    height: auto;
     background: #FF5722;
-    
+  
   }
   .reservation-section .form{
     padding: 10vh 10vw;
@@ -123,6 +123,7 @@
     grid-template-columns: 33% 33% 33%;
     justify-content: space-between;
     align-items: center;
+    
   }
   main label {
     display: block;
@@ -192,7 +193,7 @@
   #popup2 #bookingContent input, textarea {
     text-align: center;
     width: calc(100% - 24px);
-    height: 5vh;
+    height: 4vh;
     padding: 12px;
     margin-bottom: 15px;
     box-sizing: border-box;
@@ -275,6 +276,7 @@
   background-color: #F5F5DC;
   color: #ff6600;
 }
+
   
   /* Footer styles */
   footer {

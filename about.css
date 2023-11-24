@@ -1,7 +1,7 @@
 /* Reset styles */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
 * {
-  font-family: monospace;
+  font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,13 +29,6 @@
   
   
   
-  
-  /* popup */
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;1,400&family=Poppins&display=swap');
-  *{
-    font-weight: 549;
-    font-family: Poppins;
-  }
   
   /* header */
   .logo img {
@@ -87,7 +80,7 @@
   .search-bar button:hover {
     background-color: #e65c00;
   }
-  
+
   /* Main styles */
   main h1{
     font-weight: bolder;
@@ -108,7 +101,8 @@
   display: grid;
   grid-template-columns: 50% 50%;
   padding-right: 5vw;
-  height: 100vh;
+  padding-bottom: 5vh;
+  height: auto;
 }
 .about-section .right h3 {
   font-size: 24px;

@@ -6,7 +6,9 @@
     box-sizing: border-box;
     font-family: Poppins, monospace;
 }
-
+button,a,h1,h2,h3,h4,p,img{
+    cursor: pointer;
+}
 /* Body styles */
 body {
     background-color: #f4f4f4;
@@ -73,7 +75,7 @@ header {
 #popup2 #bookingContent input, textarea {
     text-align: center;
     width: calc(100% - 24px);
-    height: 5vh;
+    height: 4vh;
     padding: 12px;
     margin-bottom: 15px;
     box-sizing: border-box;
@@ -272,12 +274,13 @@ main {
 
 /* main containers style */
 .home{
-    height: 80vh;
+    height: 70vh;
     background: url(assets/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
 }
+
 
 .about{
     background-color: #ddd;
@@ -324,26 +327,25 @@ main {
 
 /* gallery section */
 
-.gallery-section h1{
+.gallery-section h2{
     text-align: center;
     font-size: 40px;
     color: #333;
     transition: color 0.3s, font-size 0.3s; /
     
 }
-.gallery-section h1:hover{
+.gallery-section h2:hover{
     color: #ff7f50; 
-    font-size: 50px;
+    font-size: 42px;
 }
 
-/* main containers style */
 .gallery{
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content:space-evenly;
     align-items: center;
     height: 100vh;
-    background: url(assets/interior1.jpg);
+    background: url(assets/reservation.avif);
     background-repeat: no-repeat;
     background-size: cover;
     gap: 20px;
@@ -387,8 +389,39 @@ filter: brightness(140%);
 filter: brightness(150%);
 }
 
+.reservation-section{
+    display: grid;
+    justify-content: center;
+    background-color: #004225;
+    color: #F5F5DC;
+    text-align: center;
+    
+    height: auto;
+}
 
+.reservation-section img{
+    display: flex;
+    height:40vh;
+    width: 40vh;
+    margin-left: 30vh;
 
+}
+
+.reservation-section button{
+    margin-bottom: 3vh;
+    font-size: large;
+    padding: 1.5vh 1.5vw;
+    border-radius: 2vh;
+    border: 1px solid #F5F5DC;
+    background-color: #004225;
+    color: #F5F5DC;
+}
+.reservation-section button:hover{
+    transition: 1s;
+    border: 1px solid #F5F5DC;;
+    color: #004225;
+    background-color: #F5F5DC;
+}
 /* Footer styles */
 footer {
     text-align: center;
