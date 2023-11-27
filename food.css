@@ -134,7 +134,7 @@
     padding: 4vw;
   }
   .gallery .pictures img:hover{
-    filter: brightness(120%);
+    filter: brightness(130%);
   }
 
   /* Footer styles */
