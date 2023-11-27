@@ -149,6 +149,10 @@
     width: 72vh;
     padding: 3vw;
   }
+
+  .pictures img:hover{
+    filter: brightness(120%);
+  }
   /* nav of foods here <3 */
 
   .food-nav{
