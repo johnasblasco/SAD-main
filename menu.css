@@ -137,7 +137,7 @@
   .main .pictures img{
     height: 55vh;
     width: 72vh;
-    padding: 3vw;
+    padding: 4vw;
   }
   .side .pictures{
     display: grid;
@@ -147,7 +147,7 @@
   .side .pictures img{
     height: 55vh;
     width: 72vh;
-    padding: 3vw;
+    padding: 4vw;
   }
 
   .pictures img:hover{
