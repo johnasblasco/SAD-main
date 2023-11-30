@@ -126,6 +126,7 @@
   margin: 50px 200px;
 }
 .about-section .right p{
+  line-height: 2;
   font-size: 15px;
 }
 .about-section .right button{
