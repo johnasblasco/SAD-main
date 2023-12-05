@@ -1,3 +1,56 @@
+<?php
+    $name = "";
+    $phone = "";
+    $r_date = "";
+    $r_time = "";
+    $p_size = "";
+    $c_order = "";
+    $errorMessage = "";
+    $successMessage = "";
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "sad";
+
+    //connection
+    $connection = new mysqli($servername,$username,$password,$database);
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST["name"];
+        $phone = $_POST["phone"];
+        $r_date = $_POST["r_date"];
+        $r_time = $_POST["r_time"];
+        $p_size = $_POST["p_size"];
+        $c_order = $_POST["c_order"];
+
+    }
+
+    do {
+        if (empty($name) || empty($phone) || empty($r_date) || empty($r_time) || empty($p_size) || empty($c_order)) {
+            $errorMessage = "All fields are required!";
+            break;
+        }
+        
+
+        //add or insert to database
+        $sql = "INSERT INTO customer (name, phone, r_date, r_time, p_size, c_order) " .
+       "VALUES ('$name', '$phone', '$r_date', '$r_time', '$p_size', '$c_order')";
+        
+        $result = $connection->query($sql);
+
+        if(!$result){
+            $errorMessage = "Invalid Query: " . $connection->error;
+            break;
+        }else{
+            $successMessage =  $name . " added successfully!";
+            echo '<script>alert("' . $successMessage . '");  window.location.href = "/SAD-main/reservation.php";</script>';
+        
+        }
+        
+    } while(false);
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +68,9 @@
         <!-- Navigation menu -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="reservation.php">Reservation</a></li>
                 <li><a href="menu.html">Our Menu</a></li>
                 <li><a href="gallery.html">Gallery </a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -99,28 +152,27 @@
     <div id="popup2">
         <div class="bookingContent" id="bookingContent">
             <span class="close-btn" onclick="closePopup()">X</span>
-            <form onsubmit="submitForm(event)">
+            <form method = "post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <h2>Make a Reservation</h2>
             
                 <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name"  value="<?php echo $name; ?>" required>
             
                 <label for="phone">Mobile Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone"  value="<?php echo $phone; ?>"required>
             
                 <label for="date">Reservation Date:</label>
-                <input type="date" id="date" name="_date" required>
+                <input type="date" id="date" name="r_date"  value="<?php echo $r_date; ?>"required>
             
                 <label for="time">Reservation Time:</label>
-                <input type="time" id="time" name="time" required>
+                <input type="time" id="time" name="r_time"  value="<?php echo $r_time; ?>"required>
             
                 <label for="guest">Party Size (e.g., number of guests):</label>
-                <input type="number" id="guest" name="guest" required>
+                <input type="number" id="guest" name="p_size"  value="<?php echo $p_size; ?>"required>
             
-                <label for="special-requests">Type your Order here: <br>(leave blank if none)</label>
-                <textarea id="special-requests" name="request" rows="4"></textarea>
-            
-                <button onclick="">Make Reservation</button>
+                <label for="special-requests">Type your Request or  your pre-order here: <br>(leave blank if none)</label>
+                <textarea id="special-requests" name="c_order" rows="4"><?php echo $c_order; ?></textarea>                
+                <button type="submit">Make Reservation</button>
                 </form>
         </div>
     </div>

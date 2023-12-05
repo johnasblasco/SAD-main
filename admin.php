@@ -20,21 +20,22 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter your password">
           </div>
-          <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
+          <button type="submit" class="btn btn-primary" onclick="login(event)">Login</button>
         </form>
       </div>
     </div>
   </div>
 
   <script>
-    function login(){
+    function login(event){
+      event.preventDefault()
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
 
         if(username === 'admin' && password === 'admin'){
             alert('LOGIN SUCCESSFUL!');
             console.log("Redirecting...");
-            window.location.href = "dashboard.html";
+            window.location.href = "dashboard.php";
 
         }
         else{
