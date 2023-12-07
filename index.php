@@ -5,8 +5,8 @@
     $r_time = "";
     $p_size = "";
     $c_order = "";
-    $errorMessage = "";
     $successMessage = "";
+    $errorMessage = "";
 
     $servername = "localhost";
     $username = "root";
@@ -14,7 +14,7 @@
     $database = "sad";
 
     //connection
-    $connection = new mysqli($servername,$username,$password,$database);
+    $connection = new mysqli($servername, $username, $password, $database);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
@@ -24,34 +24,25 @@
         $p_size = $_POST["p_size"];
         $c_order = $_POST["c_order"];
 
-    }
-
-    do {
         if (empty($name) || empty($phone) || empty($r_date) || empty($r_time) || empty($p_size) || empty($c_order)) {
             $errorMessage = "All fields are required!";
-            break;
-        }
-        
+        } else {
+            $sql = "INSERT INTO customer (name, phone, r_date, r_time, p_size, c_order) " .
+                "VALUES ('$name', '$phone', '$r_date', '$r_time', '$p_size', '$c_order')";
+            
+            $result = $connection->query($sql);
 
-        //add or insert to database
-        $sql = "INSERT INTO customer (name, phone, r_date, r_time, p_size, c_order) " .
-       "VALUES ('$name', '$phone', '$r_date', '$r_time', '$p_size', '$c_order')";
-        
-        $result = $connection->query($sql);
-
-        if(!$result){
-            $errorMessage = "Invalid Query: " . $connection->error;
-            break;
+            if (!$result) {
+                $errorMessage = "Error: " . $connection->error;
+            } else {
+                $successMessage = "Form Submitted Successfully\nName: $name\nPhone: $phone\nReservation Date: $r_date\nReservation Time: $r_time\nParty size: $p_size";
+                $successMessage = str_replace("\n", '\n', $successMessage);
+                echo '<script>alert("' . $successMessage . '"); window.location.href = "/SAD-main/index.php";</script>';
+            }
         }
-        else{
-            $successMessage =  $name . " added successfully!";
-            echo '<script>alert("' . $successMessage . '");  window.location.href = "/SAD-main/index.php";</script>';
-        
-        }
-        
-    } while(false);
-    
+    }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -43,9 +43,13 @@
             $errorMessage = "Invalid Query: " . $connection->error;
             break;
         }else{
-            $successMessage =  $name . " added successfully!";
-            echo '<script>alert("' . $successMessage . '");  window.location.href = "/SAD-main/reservation.php";</script>';
-        
+            $successMessage = "Form Submitted Successfully\nName: " . $name . "\nPhone: " . $phone . "\nReservation Date: " . $r_date . "\nReservation Time: " . $r_time . "\nParty size: " . $p_size;
+
+            // Replace '\n' with the JavaScript representation of a newline character
+            $successMessage = str_replace("\n", '\n', $successMessage);
+            
+            echo '<script>alert("' . $successMessage . '");  window.location.href = "/SAD-main/index.php";</script>';
+            
         }
         
     } while(false);

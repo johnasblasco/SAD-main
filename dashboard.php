@@ -20,12 +20,7 @@ table td{
     text-align: center;
     vertical-align: middle;
 }
-#ed{
-    border: 1px solid #4283e8;
-    background-color: #4283e8;
-    padding: 1vh 1vw;
-    color: #F1EFEF;
-}
+
 #del{
     border: 1px solid #bc1b22;
     background-color: #bc1b22;
@@ -41,6 +36,7 @@ table td{
     background-color: #F1EFEF;
     color: #4283e8;
 }
+
 </style>
 <body>
   <div class="container-fluid">
@@ -51,16 +47,19 @@ table td{
           <div class="border-bottom border-2 border-danger"><br></div>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link text-white fw-bold" href="#">Home</a>
+              <a class="nav-link text-white fw-bold" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="snav-item">
               <a class="nav-link text-white fw-bold" href="#">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white fw-bold" href="#">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link text-white fw-bold" href="#">Contact</a>
+            </li>
+          <div class="border-bottom border-2 border-danger"><br></div><br>
+            <li class="nav-item">
+            <a class="logout nav-link border border-white text-danger text-center fw-bold p-2" href="admin.php">
+                Log-Out
+            </a>
             </li>
           </ul>
         </div>
