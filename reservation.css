@@ -138,7 +138,8 @@
 
 
   main button {
-    margin: .2vh;
+
+    margin-top: 2vh;
     font-weight: bolder;
     border: none;
     border-radius: 5vh;

@@ -42,10 +42,6 @@ function searchFunction() {
 
 // popup
     // eto function for popup form
-function displayPopup() {
-    var popup = document.getElementById('popup');
-    popup.style.display = 'none';
-  }
 
   // Set timeout to call the displayPopup function after 2 seconds
   setTimeout(displayPopup, 2000);
@@ -81,8 +77,6 @@ function submitForm(event) {
   alert('Form submitted successfully!\nName: ' + nameInput.value + '\nEmail: ' + emailInput.value + '\nDate: ' + dateInput.value + '\nTime: ' + timeInput.value);
   closePopup();
 }
-
-
 
 
 

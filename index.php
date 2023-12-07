@@ -24,7 +24,7 @@
         $p_size = $_POST["p_size"];
         $c_order = $_POST["c_order"];
 
-        if (empty($name) || empty($phone) || empty($r_date) || empty($r_time) || empty($p_size) || empty($c_order)) {
+        if (empty($name) || empty($phone) || empty($r_date) || empty($r_time) || empty($p_size)) {
             $errorMessage = "All fields are required!";
         } else {
             $sql = "INSERT INTO customer (name, phone, r_date, r_time, p_size, c_order) " .
@@ -33,6 +33,7 @@
             $result = $connection->query($sql);
 
             if (!$result) {
+                die();
                 $errorMessage = "Error: " . $connection->error;
             } else {
                 $successMessage = "Form Submitted Successfully\nName: $name\nPhone: $phone\nReservation Date: $r_date\nReservation Time: $r_time\nParty size: $p_size";
@@ -148,7 +149,6 @@
                     <button type="submit">Make Reservation</button>
                     </form>
             </div>
-
         </div>
 
 

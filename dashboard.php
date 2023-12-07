@@ -20,6 +20,17 @@ table td{
     text-align: center;
     vertical-align: middle;
 }
+#acc{
+    border: 1px solid #00bf00;
+    background-color: #00bf00;
+    padding: 1vh 1vw;
+    color: #F1EFEF;
+}
+
+#acc:hover{
+    background-color: #F1EFEF;
+    color: #00bf00;
+}
 
 #del{
     border: 1px solid #bc1b22;
@@ -28,13 +39,10 @@ table td{
     color: #F1EFEF;
 }
 
+
 #del:hover{
     background-color: #F1EFEF;
     color: #bc1b22;
-}
-#ed:hover{
-    background-color: #F1EFEF;
-    color: #4283e8;
 }
 
 </style>
@@ -111,8 +119,12 @@ table td{
                 <td>{$row['p_size']}</td>
                 <td>{$row['c_order']}</td>
                 <td>
+                    <a href='approve.php?phone={$row['phone']}'><button id='acc'>accept</button></a>
+                </td>
+                <td>
                     <a href='delete.php?phone={$row['phone']}'><button id='del'>delete</button></a>
                 </td>
+              
             </tr>
             ";
         }
