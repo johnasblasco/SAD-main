@@ -2,9 +2,7 @@
 const my_products = [
     { name: "Beef Tapa with Egg", price: 149.99},
     { name: "Special Pork Sisig", price: 79.99 },
-    { name: "Chicken BBQ with Egg", price: 59.99 },
-    { name: "Chicken Creamy Mushroom & Sauce", price: 119.99 },
-    { name: "Potato Mojo", price: 49.99 },
+    { name: "Chicken BBQ with Egg", price: 59.99}
     // Add more products
 ];
 
@@ -46,7 +44,7 @@ function searchFunction() {
     // eto function for popup form
 function displayPopup() {
     var popup = document.getElementById('popup');
-    popup.style.display = 'block';
+    popup.style.display = 'none';
   }
 
   // Set timeout to call the displayPopup function after 2 seconds

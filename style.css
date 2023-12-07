@@ -392,21 +392,19 @@ filter: brightness(150%);
 }
 
 .reservation-section{
+    padding: 8vh;
     display: grid;
     justify-content: center;
-    background-color: #004225;
+    background-color: #e65c00;
     color: #F5F5DC;
     text-align: center;
     
     height: auto;
 }
 
-.reservation-section img{
-    display: flex;
-    height:40vh;
-    width: 40vh;
-    margin-left: 27%;
-
+.reservation-section  p{
+    margin-bottom: 5vh;
+    font-size: larger;
 }
 
 .reservation-section button{
@@ -415,13 +413,13 @@ filter: brightness(150%);
     padding: 1.5vh 1.5vw;
     border-radius: 2vh;
     border: 1px solid #F5F5DC;
-    background-color: #004225;
+    background-color: #e65c00;
     color: #F5F5DC;
 }
 .reservation-section button:hover{
     transition: 1s;
     border: 1px solid #F5F5DC;;
-    color: #004225;
+    color: #e65c00;
     background-color: #F5F5DC;
 }
 /* Footer styles */

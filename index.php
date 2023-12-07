@@ -62,7 +62,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="reservation.php">Reservation</a></li>
-                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="menu.html">Our Menu</a+
+                ></li>
                 <li><a href="gallery.html">Gallery </a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -76,10 +77,10 @@
     </header>
 
     <main>
-        <div id="popup">
-            <div class="popupContent">
-                <p>
-                    <span class="close-btn" onclick="closePopup()">X</span>
+    <div id="popup">
+        <div class="popupContent">
+            <p>
+                <span class="close-btn" onclick="closePopup()">X</span>
                     If you have any questions, please call our locations on the following numbers: <br>
     
                     Haeri's Sizzling House - (0956) 156 9820 <br>
@@ -121,7 +122,6 @@
                 </p>
             </div>
         </div>
-
         <div id="popup2">
             <div class="bookingContent" id="bookingContent">
                 <span class="close-btn" onclick="closePopup()">X</span>
@@ -174,6 +174,16 @@
     <!-- end na to ng main -->
 
     <!-- Sections here -->
+    <section id="reservation-section" class="reservation-section">
+        <h2>Reservation?</h2>
+        <p>
+            Reserve now to get our Promo, Limited Person only. <br>
+            to Avail. Click Reserve now Fill Details and Submit. It will Automatically sent to our server <br>
+            and fetch back to you! Good day and have a good night and sweet dreams muah! 
+        </p>
+        <button type="button" onclick="showpopup2()">Reserve Now</button>
+    </section>
+
     <section id="home" class="home"></section>
 
 
@@ -208,18 +218,6 @@
             </div>
         </section>
     </section>
-
-    <section id="reservation-section" class="reservation-section">
-        <h2>Reservation?</h2>
-        <p>
-            Reserve now to get our Promo, Limited Person only. <br>
-            to Avail. Click Reserve now Fill Details and Submit. It will Automatically sent to our server <br>
-            and fetch back to you! Good day and have a good night and sweet dreams muah! 
-        </p>
-        <img src="assets/gift.webp" class="center">
-        <button type="button" onclick="showpopup2()">Reserve Now</button>
-    </section>
-
     <footer>
         <!-- Footer Logo -->
         <div class="footer-logo">
